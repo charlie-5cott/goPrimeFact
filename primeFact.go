@@ -1,4 +1,4 @@
-package main
+package primefact
 
 import (
 	"fmt"
@@ -31,10 +31,16 @@ func PrimeFactors(n int) (pfs []int) {
 	return pfs
 }
 
-func main() {
+//InputNum used to input values into PrimeFact, returns array of primeFacts
+func InputNum() (pfs []int) {
 	var num int
 	fmt.Println("\nEnter num: ")
 	fmt.Scanln(&num)
 	fmt.Println(num)
-	fmt.Println(PrimeFactors(num))
+	pfs = PrimeFactors(num)
+	return pfs
+}
+
+func main() {
+
 }
